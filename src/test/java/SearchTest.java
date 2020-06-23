@@ -1,6 +1,9 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 /**
@@ -13,11 +16,16 @@ public class SearchTest {
     public void openGoogleComInChromeTest() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com");
-        System.out.println(driver.getTitle());
+        System.out.println(driver.getTitle() + " page has been opened");
+
+        WebElement searchField = driver.findElement(By.name("q"));
+        searchField.click();
+
         driver.quit();
     }
 
     @Test
+    @Ignore
     public void openYoutubeComInIeTest() {
         WebDriver driver = new InternetExplorerDriver();
         driver.get("https://youtube.com");
