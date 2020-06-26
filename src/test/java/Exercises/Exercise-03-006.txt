@@ -1,0 +1,5 @@
+1.1. div input.ytd-searchbox
+1.2. //input[@id='search']
+
+2.1. button#search-icon-legacy OR button.style-scope.ytd-searchbox
+2.2. //button[@id='search-icon-legacy']
