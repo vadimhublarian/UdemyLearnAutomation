@@ -24,14 +24,4 @@ public class SearchTest {
         driver.quit();
     }
 
-    @Test
-    @Ignore
-    public void openYoutubeComInIeTest() {
-        WebDriver driver = new InternetExplorerDriver();
-        driver.get("https://youtube.com");
-        driver.navigate().refresh();
-        System.out.println(driver.getTitle());
-        driver.quit();
-    }
-
 }
