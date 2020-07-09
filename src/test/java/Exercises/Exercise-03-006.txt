@@ -1,5 +1,14 @@
-1.1. div input.ytd-searchbox
-1.2. //input[@id='search']
+1) css and xpath for youtube search field:
+css: div input.ytd-searchbox
+xpath: //input[@id='search']
 
-2.1. button#search-icon-legacy OR button.style-scope.ytd-searchbox
-2.2. //button[@id='search-icon-legacy']
+2) css and xpath for youtube search button:
+css: button#search-icon-legacy OR button.style-scope.ytd-searchbox
+xpath: //button[@id='search-icon-legacy']
+
+3) list of elements (items) in left menu (with xpath or css):
+css: ytd-guide-entry-renderer.style-scope.ytd-guide-section-renderer
+xpath: //ytd-guide-entry-renderer[contains(@class, 'style-scope ytd-guide-section-renderer')]
+
+4) locator for element which have attribute "type" containing partial text or text "image":
+xpath: //*[contains(@type,'image')]
