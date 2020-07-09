@@ -6,6 +6,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 /**
  * Created by MasterJedi on 05.04.2020.
  * LearnAutomation
@@ -20,6 +22,12 @@ public class SearchTest {
 
         WebElement searchField = driver.findElement(By.name("q"));
         searchField.click();
+
+        WebElement googleAppsButton = driver.findElement(By.cssSelector("div#gbwa a"));
+        googleAppsButton.click();
+
+        List<WebElement> iAmFeelingLuckyButtons = driver.findElements(By.xpath("//input[@name='btnI']"));
+        iAmFeelingLuckyButtons.get(1).click();
 
         driver.quit();
     }
